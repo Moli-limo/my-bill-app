@@ -74,7 +74,7 @@ def main(page: ft.Page):
     def export_click(e):
         try:
             timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-            filename = f"易计记账本_{timestamp}.csv"
+            filename = f"简易记账本_{timestamp}.csv"
             android_download_dir = "/storage/emulated/0/Download"
             if os.path.exists(android_download_dir):
                 save_path = os.path.join(android_download_dir, filename)
@@ -321,7 +321,7 @@ def main(page: ft.Page):
     header = ft.Container(
         content=ft.Row([
             ft.Icon(ft.Icons.RESTAURANT, color="pink", size=24),
-            ft.Text("猪肉记账本", size=18, weight="bold"),
+            ft.Text("简易记账本", size=18, weight="bold"),
             txt_price
         ], alignment="spaceBetween"),
         padding=10,
